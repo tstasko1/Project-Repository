@@ -1,170 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Stasko</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleleapis.com/css?family=Alegreya"
-    />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Homepage</title>
     <style>
-      img {
+      body {
+        background-image: url("bluffsunset.jpg");
+        background-size: cover;
+      }
+      .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #667292;
+        overflow: hidden;
+        padding: 15px;
+      }
+
+      .nav-bar a {
         float: left;
-        margin: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #e0e2e4;
       }
-      img:hover {
-        opacity: 0.5;
-      }
-      h1 {
-        font-family: serif;
-        color: black;
-        background-color: aliceblue;
+      header {
+        color: #e0e2e4;
+        padding: 20px;
         text-align: center;
       }
-      h3 {
-        font-family: cursive;
-        color: black;
-        background-color: aquamarine;
-        text-align: center;
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        background-color: #484f4f;
+        padding: 20px;
       }
-      h2 {
-        font-family: "Alegreya", Serif;
+      .grid-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+      }
+      img {
+        max-width: 100%;
+        padding: 1px;
       }
       p {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: cadetblue;
-        font-size: 1.2em;
-        text-indent: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #667292;
+        font-size: smaller;
+        text-align: center;
       }
-      body {
-        background-color: beige;
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #e0e2e4;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
       }
-      a {
-        text-decoration: none;
-      }
-      nav {
-  background-color:lightblue;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-li {
-  margin: 0 10px;
-  position: relative;
-}
-
-a {
-  display: block;
-  color: gray;
-  text-decoration: none;
-  padding: 15px;
-}
-
-a:hover {
-  background-color: #555;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: lightblue;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-fieldset{
-    display: flex;
-}
-  
     </style>
   </head>
   <body>
-    <nav>
-        <ul>
-        <li><a href="#">Thomas Stasko</a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#About Me">About Me</a></li>
-          <li><a href="#My Hobbies">My Interests</a></li>
-          <li class="dropdown">
-            <a href="#">Homework 2</a>
-            <ul class="dropdown-menu">
-              <li><a href="HW2-1.html">HW2-1</a></li>
-              <li><a href="HW2-2.html">HW2-2</a></li>
-              <li><a href="HW2-3.html">HW2-3</a></li>
-              <li><a href="HW2-4.html">HW2-4</a></li>
-            </ul>
-          </li>
-          <li><a href="#Contact Information">Contact Information</a></li>
-        </ul>
-      </nav>
-      <h2 id="About Me">About Me</h2>
-      <p>
-        <img src="images/blockyft.jpg" alt="" width="80" />
-        My name is Thomas Stasko. I am 21 years old from Fairfield Connecticut
-        and my favorite type of cuisine is Italian. I have a younger brother
-        named Luke. My hobbies include, fishing, skiing, cooking, golf, and
-        baseball. I also am very knowlegable of diesel engines. A fun fact about
-        me is that I am a citizen of France as well as the United States!
-      </p>
-    </section>
-    <p>
-      I came to
-      <a href="https://www.babson.edu/"
-        >Babson College</a
-      >
-      because of its reputation as a strong business school and diverse student
-      body. Babson also provided me the opportunity to continue my atheltic
-      career, although I no longer play on a varsity team. After graduation I
-      plan to work for an outdoors company and put my marketing skills to work,
-      while continuing to fish as much as possible. I hope to own my own boat
-      one day and start a charter/commercial fishing business.
-    </p>
-    <section>
-      <h2 id="My Hobbies">My Hobbies</h2>
-      <p>
-        <img src="images/IMG-2022.jpg" alt="" width="80" />
-        My first hobby is fishing. I taught myself how to fish when I was 13
-        years old. Growing up in a coastal town in the northeast, my favorite
-        fish to catch was striped bass because of their beauty and their ability
-        to adapt to many different marine environments. I make my own flies and
-        wooden lures to catch them. I also love to target
-        <a
-          href="https://www.onthewater.com/light-tackle-bluefin-tuna-fishing"
-          >bluefin</a
-        >
-        and yellowfin tuna. The largest tuna I have ever caught was over 100
-        inches long and weighed over 300 pounds. Although I still fish in the
-        winter, I spend more time skiing than fishing during this time. I have
-        been skiing for 15 years. I would like to one day ski somehere other
-        than the east coast of the US.
-      </p>
-    </section>
-    <hr />
-    <section>
-      <h3 id="Contact Information">Contact Information</h3>
-      <fieldset>
-      <a href="https://github.com/tstasko1"
-        >GitHub Profile</a
-      >
-      <a href="mailto: tstasko1@babson.edu">Email</a>
-      <a href="sitemap.html">sitemap.html</a>
-      </fieldset>
-    </section>
+    <div class="nav-bar">
+      <a
+        class="active"
+        rel="shortcut icon"
+        href="project-index.html"
+        type="image/x-con"
+        ><img src="images/favicon-32x32.png"
+      /></a>
+      <a href="project-shop.html">Shop</a>
+      <a href="project-conservation.html">Conservation</a>
+      <a href="project-about.html">About</a>
+      <a href="project-contact.html">Contact Me</a>
+    </div>
+    <header><h1>Welcome!</h1></header>
+    <main>
+      <div class="grid">
+        <div class="grid-img">
+          <img src="images/bucktail.jpg" alt="image 1" />
+        </div>
+        <div class="grid-img">
+          <img src="images/peacockhearl.jpg" alt="image 2" />
+        </div>
+        <div class="grid-img">
+          <img src="images/feathers.jpg" alt="image 3" />
+        </div>
+        <div class="grid-img">
+          <img src="images/sandeelsideshot.jpg" alt="image 4" />
+        </div>
+      </div>
+      <div>
+        <p>
+          Tomlikestofish.com is a place for northeast fisherman to learn, and
+          connect with members of our community. Our ecosystems are in trouble,
+          and nobody is effected by this more than our fellow outdoorsmen. So
+          take a look around the site. Hopefully, you will learn a bit about our
+          native fish, find ways to become involved, or even purchase some flies
+          that will help elevate your fishing game.
+        </p>
+      </div>
+    </main>
+  <p class="sitemap"> <a href="project-sitemap.html">Sitemap</a></p>
   </body>
 </html>
