@@ -6,21 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Homepage</title>
     <style>
-      body {
-        background-image: url("bluffsunset.jpg");
-        background-size: cover;
-      }
       .nav-bar {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: #667292;
         overflow: hidden;
-        padding: 15px;
+        padding: 5px;
+        font-size: large;
       }
-
       .nav-bar a {
-        float: left;
-        text-align: center;
         text-decoration: none;
         font-family: Arial, Helvetica, sans-serif;
         color: #e0e2e4;
@@ -30,12 +25,16 @@
         padding: 20px;
         text-align: center;
       }
+      body {
+        background-image: url(bluffsunset.jpg);
+        background-size: cover;
+      }
       .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 40px;
         background-color: #484f4f;
-        padding: 20px;
+        border-radius: 1%;
       }
       .grid-img {
         display: flex;
@@ -64,11 +63,7 @@
   </head>
   <body>
     <div class="nav-bar">
-      <a
-        class="active"
-        rel="shortcut icon"
-        href="index.html"
-        type="image/x-con"
+      <a class="active" rel="shortcut icon" href="index.html" type="image/x-con"
         ><img src="./images/favicon-32x32.png"
       /></a>
       <a href="project-shop.html">Shop</a>
@@ -96,13 +91,13 @@
         <p>
           Tomlikestofish.com is a place for northeast fisherman to learn, and
           connect with members of our community. Our ecosystems are in trouble,
-          and nobody knows this more than our fellow outdoorsmen. So
-          take a look around the site. Hopefully, you will learn a bit about our
-          native fish, find ways to become involved, or even purchase some flies
-          that will help elevate your fishing game.
+          and nobody knows this more than our fellow outdoorsmen. So take a look
+          around the site. Hopefully, you will learn a bit about our native
+          fish, find ways to become involved, or even purchase some flies that
+          will help elevate your fishing game.
         </p>
       </div>
     </main>
-  <p class="sitemap"> <a href="project-sitemap.html">Sitemap</a></p>
+    <p class="sitemap"><a href="project-sitemap.html">Sitemap</a></p>
   </body>
 </html>
