@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact</title>
   </head>
   <style>
     .nav-bar {
@@ -25,6 +25,7 @@
       color: #e0e2e4;
       padding: 20px;
       text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
     }
     body {
       background-image: url(IMG-3068.jpg);
@@ -34,76 +35,94 @@
       display: block;
       max-width: 40%;
       justify-content: center;
-      color: #e0e2e4;
-      background-color: #667292;
+      color: #667292;
+      background-color: #e0e2e4;
+      font-size: large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .form {
+      max-width: 40%;
+      padding: 5px;
+      background-color: #e0e2e4;
+      border-radius: 1%;
+      display: block;
+    }
+    .hover {
+      transition: transform 0.3s ease-in-out;
+    }
+    .hover:hover {
+      transform: scale(1.2);
+      opacity: 25%;
     }
   </style>
   <body>
     <div class="nav-bar">
-      <a class="active" rel="shortcut icon" href="index.html" type="image/x-con"
+      <a class="hover" rel="shortcut icon" href="index.html" type="image/x-con"
         ><img src="images/favicon-32x32.png"
       /></a>
-      <a href="project-shop.html">Shop</a>
-      <a href="project-conservation.html">Conservation</a>
-      <a href="project-about.html">About</a>
-      <a href="project-contact.html">Contact Me</a>
+      <a class="hover" href="project-shop.html">Shop</a>
+      <a class="hover" href="project-conservation.html">Conservation</a>
+      <a class="hover" href="project-about.html">About</a>
+      <a class="hover" href="project-contact.html">Contact Me</a>
     </div>
     <header><h1>Contact Me</h1></header>
-    <fieldset>
-      <legend>Your Information:</legend>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
-      </form>
-      <form>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" />
-      </form>
-      <form></form>
-    </fieldset>
-    <fieldset>
-      <legend>About You</legend>
-      <form>
-        <label for="product-purchased"
-          >What's your favorite fish to target?</label
-        >
-        <input list="product-purchased" name="product-purchased" />
-        <datalist id="product-purchased">
-          <option value="Stiped Bass"></option>
-          <option value="Albies"></option>
-          <option value="Bluefish"></option>
-          <option value="Fluke"></option>
-          <option value="Other"></option>
-        </datalist>
-      </form>
-      <form>
-        What is your experience level?
+    <div class="form">
+      <fieldset>
+        <legend>Your Information:</legend>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+        </form>
+        <form>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+        </form>
+        <form></form>
+      </fieldset>
+      <fieldset>
+        <legend>About You</legend>
+        <form>
+          <label for="product-purchased"
+            >What's your favorite fish to target?</label
+          >
+          <input list="product-purchased" name="product-purchased" />
+          <datalist id="product-purchased">
+            <option value="Stiped Bass"></option>
+            <option value="Albies"></option>
+            <option value="Bluefish"></option>
+            <option value="Fluke"></option>
+            <option value="Other"></option>
+          </datalist>
+        </form>
+        <form>
+          What is your experience level?
+          <label>
+            Beginner
+            <input type="radio" name="review" value="great" />
+          </label>
+          <label>
+            Intermediate
+            <input type="radio" name="review" value="awesome" />
+          </label>
+          <label>
+            Pro
+            <input type="radio" name="review" value="good" />
+          </label>
+        </form>
+        <form name="comment" method="post">
+          <label for="comment">What's up?</label><br />
+          <textarea id="comment" name="comment" rows="4" cols="40"></textarea
+          ><br />
+        </form>
         <label>
-          Beginner
-          <input type="radio" name="review" value="great" />
+          <input type="checkbox" name="subscribe" value="yes" checked />
+          Sign me up for email updates
         </label>
-        <label>
-          Intermediate
-          <input type="radio" name="review" value="awesome" />
-        </label>
-        <label>
-          Pro
-          <input type="radio" name="review" value="good" />
-        </label>
-      </form>
-      <form name="comment" method="post">
-        <label for="comment">What's up?</label><br />
-        <textarea id="comment" name="comment" rows="4" cols="40"></textarea
-        ><br />
-      </form>
-      <label>
-        <input type="checkbox" name="subscribe" value="yes" checked />
-        Sign me up for email updates
-      </label>
-      <form>
-        <button type="submit">Submit</button>
-        <button type="submit">Reset</button>
-      </form>
-    </fieldset>
+        <form>
+          <button type="submit">Submit</button>
+          <button type="submit">Reset</button>
+        </form>
+      </fieldset>
+    </div>
   </body>
 </html>

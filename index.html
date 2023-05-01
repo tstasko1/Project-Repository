@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Homepage</title>
+    <title>Tom Likes to Fish</title>
     <style>
       .nav-bar {
         display: flex;
@@ -24,67 +24,100 @@
         color: #e0e2e4;
         padding: 20px;
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
       }
       body {
         background-image: url(bluffsunset.jpg);
         background-size: cover;
       }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 40px;
-        background-color: #484f4f;
+      main {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #e0e2e4;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         border-radius: 1%;
       }
-      .grid-img {
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #667292;
+        font-size: large;
+        text-align: center;
+      }
+      .slideshow-wrapper {
         display: flex;
-        align-items: center;
         justify-content: center;
-        max-width: 100%;
+        width: 100%;
+        height: 98vh;
+      }
+      .slideshow-container {
+        position: relative;
+        width: 72%;
+        top: 0;
+        left: 0;
+      }
+      .slides {
+        list-style: none;
+      }
+      .slides li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .slides li.active {
+        opacity: 1;
+      }
+      .slides li img {
+        width: 100%;
       }
       img {
         max-width: 100%;
         padding: 1px;
       }
-      p {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #667292;
-        font-size: smaller;
-        text-align: center;
+      .hover {
+        transition: transform 0.3s ease-in-out;
       }
-      main {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #e0e2e4;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      .hover:hover {
+        transform: scale(1.2);
+        opacity: 25%;
       }
     </style>
   </head>
   <body>
     <div class="nav-bar">
-      <a class="active" rel="shortcut icon" href="index.html" type="image/x-con"
-        ><img src="./images/favicon-32x32.png"
+      <a class="hover" rel="shortcut icon" href="index.html" type="image/x-con"
+        ><img src="images/favicon-32x32.png"
       /></a>
-      <a href="project-shop.html">Shop</a>
-      <a href="project-conservation.html">Conservation</a>
-      <a href="project-about.html">About</a>
-      <a href="project-contact.html">Contact Me</a>
+      <a class="hover" href="project-shop.html">Shop</a>
+      <a class="hover" href="project-conservation.html">Conservation</a>
+      <a class="hover" href="project-about.html">About</a>
+      <a class="hover" href="project-contact.html">Contact Me</a>
     </div>
     <header><h1>Welcome!</h1></header>
     <main>
-      <div class="grid">
-        <div class="grid-img">
-          <img src="./images/bucktail.jpg" alt="image 1" />
-        </div>
-        <div class="grid-img">
-          <img src="./images/peacockhearl.jpg" alt="image 2" />
-        </div>
-        <div class="grid-img">
-          <img src="./images/feathers.jpg" alt="image 3" />
-        </div>
-        <div class="grid-img">
-          <img src="./images/sandeelsideshot.jpg" alt="image 4" />
+      <div class="slideshow-wrapper">
+        <div class="slideshow-container">
+          <ul class="slides">
+            <li>
+              <img src="images/feathers.jpg" alt="Slide 1" />
+            </li>
+            <li>
+              <img src="images/peacockhearl.jpg" alt="Slide 2" />
+            </li>
+            <li>
+              <img src="images/sandeelsideshot.jpg" alt="Slide 3" />
+            </li>
+            <li>
+              <img src="images/blockyft.jpg" alt="Slide 5" />
+            </li>
+            <li>
+              <img src="images/IMG-0536.jpg" alt="Slide 6" />
+            </li>
+          </ul>
         </div>
       </div>
       <div>
@@ -99,5 +132,37 @@
       </div>
     </main>
     <p class="sitemap"><a href="project-sitemap.html">Sitemap</a></p>
+    <script>
+      var slideshow = document.querySelector(".slideshow-container");
+      var slides = slideshow.querySelectorAll(".slides li");
+
+      var currentSlideIndex = 0;
+      slides[currentSlideIndex].classList.add("active");
+
+      setInterval(function () {
+        goToSlide(currentSlideIndex + 1);
+      }, 5000);
+
+      function goToSlide(slideIndex) {
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        } else if (slideIndex < 0) {
+          slideIndex = slides.length - 1;
+        }
+        slides[currentSlideIndex].classList.remove("active");
+        slides[slideIndex].classList.add("active");
+        currentSlideIndex = slideIndex;
+      }
+
+      var prevButton = slideshow.querySelector(".prev-button");
+      var nextButton = slideshow.querySelector(".next-button");
+      prevButton.addEventListener("click", function () {
+        goToSlide(currentSlideIndex - 1);
+      });
+      nextButton.addEventListener("click", function () {
+        goToSlide(currentSlideIndex + 1);
+      });
+      //javascript code developed with the assistance of chatGPT and w3schools
+    </script>
   </body>
 </html>

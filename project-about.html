@@ -24,6 +24,7 @@
         color: #e0e2e4;
         padding: 20px;
         text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
       }
       main {
         max-width: 800px;
@@ -44,40 +45,42 @@
       }
       h2 {
         color: #667292;
+        text-align: center;
       }
-      
       img {
         display: block;
         max-width: 100%;
-        margin: 20px auto;
       }
       p {
         font-family: Arial, Helvetica, sans-serif;
         color: #667292;
-        font-size: smaller;
+        font-size: large;
+      }
+      .hover {
+        transition: transform 0.3s ease-in-out;
+      }
+      .hover:hover {
+        transform: scale(1.2);
+        opacity: 25%;
       }
     </style>
   </head>
   <body>
     <div class="nav-bar">
-      <a
-        class="active"
-        rel="shortcut icon"
-        href="index.html"
-        type="image/x-con"
+      <a class="hover" rel="shortcut icon" href="index.html" type="image/x-con"
         ><img src="images/favicon-32x32.png"
-      /></a>
-      <a href="project-shop.html">Shop</a>
-      <a href="project-conservation.html">Conservation</a>
-      <a href="project-about.html">About</a>
-      <a href="project-contact.html">Contact Me</a>
+        /></a>
+      <a class="hover" href="project-shop.html">Shop</a>
+      <a class="hover" href="project-conservation.html">Conservation</a>
+      <a class="hover" href="project-about.html">About</a>
+      <a class="hover" href="project-contact.html">Contact Me</a>
     </div>
     <header><h1>About Me</h1></header>
     </header>
     <main>
-      <img src="images/blockyft.jpg" alt="My Photo" title="Tom with a Tuna" />
-      <h2>Meet Tom</h2>
-      <p>
+       <img src="images/blockyft.jpg" alt="My Photo" title="Tom with a Tuna" loading="lazy"/>
+       <h2>Meet Tom</h2> 
+       <p>
         A 21-year-old serious fisherman from the Northeast USA. Tom has a deep
         passion for fishing and spends most of his free time out on the water.
         He is constantly studying the behavior and patterns of fish in the area

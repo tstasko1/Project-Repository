@@ -7,20 +7,20 @@
     <title>Oops!</title>
   </head>
   <style>
-    .nav-bar {
-      display: flex;
-      justify-content: space-between;
-      background-color: #667292;
-      overflow: hidden;
-      padding: 15px;
-    }
-    .nav-bar a {
-      float: left;
-      text-align: center;
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #e0e2e4;
-    }
+      .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #667292;
+        overflow: hidden;
+        padding: 5px;
+        font-size: large;
+      }
+      .nav-bar a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #e0e2e4;
+      }
     body {
       background-color: #484f4f;
       font-family: Arial, Helvetica, sans-serif;
@@ -31,28 +31,31 @@
     .Oh {
       margin: 40px;
     }
+    .hover {
+        transition: transform 0.3s ease-in-out;
+      }
+      .hover:hover {
+        transform: scale(1.2);
+        opacity: 25%;
+      }
+    </style>
   </style>
   <body>
     <div class="nav-bar">
-      <a
-        class="active"
-        rel="shortcut icon"
-        href="index.html"
-        type="image/x-con"
+      <a class="hover" rel="shortcut icon" href="index.html" type="image/x-con"
         ><img src="images/favicon-32x32.png"
       /></a>
-      <a href="project-shop.html">Shop</a>
-      <a href="project-conservation.html">Conservation</a>
-      <a href="project-about.html">About</a>
-      <a href="project-contact.html">Contact Me</a>
+      <a class="hover" href="project-shop.html">Shop</a>
+      <a class="hover" href="project-conservation.html">Conservation</a>
+      <a class="hover" href="project-about.html">About</a>
+      <a class="hover" href="project-contact.html">Contact Me</a>
     </div>
     <div class="Oh">
-      <h1>Oh no!</h1>
-      <p>
-        I am sorry to tell you...Tom is very busy and has not been able to replenish
-        his inventory...check back soon!
-      </p>
-
+    <h1>Oh no!</h1>
+    <p>
+       I am sorry to tell you...Tom is very busy and has not been able to replenish
+      his inventory...check back soon!
+    </p>
       <a href="project-shop.html"><button>Go Back</button></a>
     </div>
   </body>
